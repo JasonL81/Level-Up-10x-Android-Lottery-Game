@@ -356,7 +356,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
             ) {
                 //First Column, Fourth Up Button
                 Button(
-                    onClick = { if ((viewModel.thirdUp3 != "STOP") && (viewModel.thirdUp3 != " "))
+                    onClick = { if ((viewModel.thirdUp != "STOP") && (viewModel.thirdUp != " "))
                                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
                         viewModel.playLottery(4) },
                     modifier = Modifier
