@@ -354,6 +354,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                     .fillMaxWidth()
                     .background(Color.Blue)
             ) {
+                //First Column, Fourth Up Button
                 Button(
                     onClick = { if ((viewModel.thirdUp3 != "STOP") && (viewModel.thirdUp3 != " "))
                                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
@@ -370,6 +371,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                 ) {
                     Text("Up", fontWeight = FontWeight.Bold, fontSize = 16.sp)
                 }
+                //Second Column, Fourth Up Button
                 Button(
                     onClick = { if ((viewModel.thirdUp2 != "STOP") && (viewModel.thirdUp2 != " "))
                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
@@ -386,7 +388,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                 ) {
                     Text("Up", fontWeight = FontWeight.Bold, fontSize = 16.sp)
                 }
-                // Button 4, third column
+                //Third Column, Fourth Up Button
                 Button(
                     onClick =  { if ((viewModel.thirdUp3 != "STOP") && (viewModel.thirdUp3 != " "))
                                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress) };
@@ -403,6 +405,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                 ) {
                     Text("Up", fontWeight = FontWeight.Bold, fontSize = 16.sp)
                 }
+                //Fourth Column, Fourth Up Button
                 Button(
                     onClick = { if ((viewModel.thirdUp4 != "STOP") && (viewModel.thirdUp4 != " "))
                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
@@ -593,6 +596,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                     .fillMaxWidth()
                     .background(Color.Blue)
             ) {
+                //First Column, Third Up Button
                 Button(
                     onClick = { if ((viewModel.secondUp != "STOP") && (viewModel.secondUp != " "))
                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
@@ -609,6 +613,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                 ) {
                     Text("Up", fontWeight = FontWeight.Bold, fontSize = 16.sp)
                 }
+                //Second Column, Third Up Button
                 Button(
                     onClick = { if ((viewModel.secondUp2 != "STOP") && (viewModel.secondUp2 != " "))
                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
@@ -625,6 +630,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                 ) {
                     Text("Up", fontWeight = FontWeight.Bold, fontSize = 16.sp)
                 }
+                //Third Column, Third Up Button
                 Button(
                     onClick = { if ((viewModel.secondUp3 != "STOP") && (viewModel.secondUp3 != " "))
                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
@@ -641,6 +647,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                 ) {
                     Text("Up", fontWeight = FontWeight.Bold, fontSize = 16.sp)
                 }
+                //Fourth Colum, Third Up Button
                 Button(
                     onClick = { if ((viewModel.secondUp4 != "STOP") && (viewModel.secondUp4 != " "))
                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
@@ -832,6 +839,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                     .fillMaxWidth()
                     .background(Color.Blue)
             ) {
+                //First Column, Second Up Button
                 Button(
                     onClick = { if ((viewModel.firstUp != "STOP") && (viewModel.firstUp != " "))
                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
@@ -849,6 +857,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                 ) {
                     Text("Up", fontWeight = FontWeight.Bold, fontSize = 16.sp)
                 }
+                //Second Column, Second Up Button
                 Button(
                     onClick = { if ((viewModel.firstUp2 != "STOP") && (viewModel.firstUp2 != " "))
                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
@@ -865,6 +874,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                 ) {
                     Text("Up", fontWeight = FontWeight.Bold, fontSize = 16.sp)
                 }
+                //Third Column, Second Up Button
                 Button(
                     onClick = { if ((viewModel.firstUp3 != "STOP") && (viewModel.firstUp3 != " "))
                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
@@ -881,6 +891,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                 ) {
                     Text("Up", fontWeight = FontWeight.Bold, fontSize = 16.sp)
                 }
+                //Fourth Column, Second Up Button
                 Button(
                     onClick = { if ((viewModel.firstUp4 != "STOP") && (viewModel.firstUp4 != " "))
                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
