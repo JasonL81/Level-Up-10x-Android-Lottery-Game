@@ -116,6 +116,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                 horizontalArrangement = Arrangement.SpaceBetween,
                 modifier = Modifier.width(1000.dp)
             ) {
+                //First Column Prize Button
                 Surface(modifier = Modifier
                     .clip(CircleShape)
                     .size(80.dp),
@@ -131,6 +132,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                             fontWeight = FontWeight.Bold, fontSize = 30.sp, textAlign = TextAlign.Center, color = Color.Blue)
                     }
                 }
+                //Second Column Prize Button
                 Surface(modifier = Modifier
                     .clip(CircleShape)
                     .size(80.dp),
@@ -146,6 +148,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                             fontWeight = FontWeight.Bold, fontSize = 30.sp, textAlign = TextAlign.Center, color = Color.Blue)
                     }
                 }
+                //Third Column Prize Button
                 Surface(modifier = Modifier
                     .clip(CircleShape)
                     .size(80.dp),
@@ -161,6 +164,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                             fontWeight = FontWeight.Bold, fontSize = 30.sp, textAlign = TextAlign.Center, color = Color.Blue)
                     }
                 }
+                //Fourth Column Prize Button
                 Surface(modifier = Modifier
                     .clip(CircleShape)
                     .size(80.dp),
