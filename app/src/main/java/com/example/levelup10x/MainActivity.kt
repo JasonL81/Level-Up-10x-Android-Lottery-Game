@@ -362,7 +362,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                     modifier = Modifier
                         .clip(CircleShape)
                         .padding(top = 40.dp)
-                        .size(70.dp),
+                        .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color.Yellow,
@@ -379,7 +379,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                     modifier = Modifier
                         .clip(CircleShape)
                         .padding(top = 40.dp)
-                        .size(70.dp),
+                        .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color.Yellow,
@@ -396,7 +396,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                     modifier = Modifier
                         .clip(CircleShape)
                         .padding(top = 40.dp)
-                        .size(70.dp),
+                        .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color.Yellow,
@@ -413,7 +413,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                     modifier = Modifier
                         .clip(CircleShape)
                         .padding(top = 40.dp)
-                        .size(70.dp),
+                        .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color.Yellow,
@@ -604,7 +604,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                     modifier = Modifier
                         .clip(CircleShape)
                         .padding(top = 40.dp)
-                        .size(70.dp),
+                        .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color.Yellow,
@@ -621,7 +621,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                     modifier = Modifier
                         .clip(CircleShape)
                         .padding(top = 40.dp)
-                        .size(70.dp),
+                        .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color.Yellow,
@@ -638,7 +638,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                     modifier = Modifier
                         .clip(CircleShape)
                         .padding(top = 40.dp)
-                        .size(70.dp),
+                        .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color.Yellow,
@@ -655,7 +655,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                     modifier = Modifier
                         .clip(CircleShape)
                         .padding(top = 40.dp)
-                        .size(70.dp),
+                        .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color.Yellow,
@@ -847,7 +847,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                     modifier = Modifier
                         .clip(CircleShape)
                         .padding(top = 40.dp)
-                        .size(70.dp),
+                        .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color.Yellow,
@@ -865,7 +865,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                     modifier = Modifier
                         .clip(CircleShape)
                         .padding(top = 40.dp)
-                        .size(70.dp),
+                        .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color.Yellow,
@@ -882,7 +882,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                     modifier = Modifier
                         .clip(CircleShape)
                         .padding(top = 40.dp)
-                        .size(70.dp),
+                        .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color.Yellow,
@@ -899,7 +899,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                     modifier = Modifier
                         .clip(CircleShape)
                         .padding(top = 40.dp)
-                        .size(70.dp),
+                        .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color.Yellow,
