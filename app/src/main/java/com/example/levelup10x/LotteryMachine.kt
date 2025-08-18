@@ -120,7 +120,7 @@ class LotteryMachine {
     }
 
     private fun prize(): String {
-        val prizes = arrayOf("UP",  "2x", "5x", "10x")
+        val prizes = arrayOf("UP", "STOP",  "2x", "5x", "10x")
         return prizes.random()
     }
 
