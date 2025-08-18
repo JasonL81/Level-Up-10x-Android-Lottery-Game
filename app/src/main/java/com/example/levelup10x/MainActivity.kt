@@ -888,7 +888,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                     onClick = { if ((viewModel.firstUp != "STOP") && (viewModel.firstUp != " "))
                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress)
                         viewModel.secondUpClicked = true }
-                        viewModel.playLottery(2)  },
+                        viewModel.playLottery(2) },
                     modifier = Modifier
                         .clip(CircleShape)
                         .padding(top = 40.dp)
@@ -907,9 +907,9 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                 //Second Column, Second Up Button
                 Button(
                     onClick = { if ((viewModel.firstUp2 != "STOP") && (viewModel.firstUp2 != " "))
-                    { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
-                        viewModel.playLottery(7)
-                        viewModel.secondUp2Clicked = true },
+                    { haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                        viewModel.secondUp2Clicked = true }
+                        viewModel.playLottery(7) },
                     modifier = Modifier
                         .clip(CircleShape)
                         .padding(top = 40.dp)
