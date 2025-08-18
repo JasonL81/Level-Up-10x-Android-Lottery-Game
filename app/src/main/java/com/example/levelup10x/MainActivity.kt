@@ -3,7 +3,6 @@ import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -26,6 +25,7 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -42,6 +42,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.levelup10x.ui.theme.LevelUp10xTheme
 import androidx.lifecycle.viewmodel.compose.viewModel
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
+import kotlinx.coroutines.launch
 
 
 class MainActivity : ComponentActivity() {
@@ -100,6 +103,15 @@ fun TitleDisplay(message: String, fontSize: Float){
 @Composable
 fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
     val haptic = LocalHapticFeedback.current
+    //Flashing Colors for Duplicate Wins
+    LaunchedEffect(Unit) {
+        launch {
+            while (isActive) {
+                delay(600L)
+                viewModel.state = !viewModel.state
+            }
+        }
+    }
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
@@ -365,7 +377,12 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color.Yellow,
+                        containerColor = when (viewModel.thirdUp){
+                           "UP" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "2x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "5x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "10x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                           else -> Color.Yellow},
                         contentColor = Color.Blue
                     )
                 ) {
@@ -382,7 +399,12 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color.Yellow,
+                        containerColor = when (viewModel.thirdUp2){
+                            "UP" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "2x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "5x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "10x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            else -> Color.Yellow},
                         contentColor = Color.Blue
                     )
                 ) {
@@ -399,7 +421,12 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color.Yellow,
+                        containerColor = when (viewModel.thirdUp3){
+                            "UP" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "2x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "5x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "10x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            else -> Color.Yellow},
                         contentColor = Color.Blue
                     )
                 ) {
@@ -416,7 +443,12 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color.Yellow,
+                        containerColor = when (viewModel.thirdUp4){
+                            "UP" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "2x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "5x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "10x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            else -> Color.Yellow},
                         contentColor = Color.Blue
                     )
                 ) {
@@ -607,7 +639,12 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color.Yellow,
+                        containerColor = when (viewModel.secondUp){
+                            "UP" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "2x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "5x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "10x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            else -> Color.Yellow},
                         contentColor = Color.Blue
                     )
                 ) {
@@ -624,7 +661,12 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color.Yellow,
+                        containerColor = when (viewModel.secondUp2){
+                            "UP" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "2x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "5x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "10x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            else -> Color.Yellow},
                         contentColor = Color.Blue
                     )
                 ) {
@@ -641,7 +683,12 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color.Yellow,
+                        containerColor = when (viewModel.secondUp3){
+                            "UP" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "2x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "5x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "10x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            else -> Color.Yellow},
                         contentColor = Color.Blue
                     )
                 ) {
@@ -658,7 +705,12 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color.Yellow,
+                        containerColor = when (viewModel.secondUp4){
+                            "UP" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "2x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "5x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "10x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            else -> Color.Yellow},
                         contentColor = Color.Blue
                     )
                 ) {
@@ -841,25 +893,27 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
             ) {
                 //First Column, Second Up Button
                 Button(
-                    onClick = { if ((viewModel.firstUp != "STOP") && (viewModel.firstUp != " "))
+                    onClick = { viewModel.firstUpClicked = true; if ((viewModel.firstUp != "STOP") && (viewModel.firstUp != " "))
                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
-                        viewModel.playLottery(2) },
+                        viewModel.playLottery(2)  },
                     modifier = Modifier
                         .clip(CircleShape)
                         .padding(top = 40.dp)
                         .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color.Yellow,
+                        containerColor = if ((viewModel.firstUp != "STOP") && (viewModel.firstUp != " ") && !viewModel.firstUpClicked) {
+                            if (viewModel.state) Color.Yellow else Color.Green}
+                        else {
+                            Color.Yellow},
                         contentColor = Color.Blue
                     )
-
                 ) {
                     Text("Up", fontWeight = FontWeight.Bold, fontSize = 16.sp)
                 }
                 //Second Column, Second Up Button
                 Button(
-                    onClick = { if ((viewModel.firstUp2 != "STOP") && (viewModel.firstUp2 != " "))
+                    onClick = {viewModel.secondUpClicked = true; if ((viewModel.firstUp2 != "STOP") && (viewModel.firstUp2 != " "))
                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
                         viewModel.playLottery(7) },
                     modifier = Modifier
@@ -868,7 +922,10 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color.Yellow,
+                        containerColor = if ((viewModel.firstUp2 != "STOP") && (viewModel.firstUp2 != " ") && !viewModel.secondUpClicked) {
+                            if (viewModel.state) Color.Yellow else Color.Green}
+                        else {
+                            Color.Yellow},
                         contentColor = Color.Blue
                     )
                 ) {
@@ -885,7 +942,12 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color.Yellow,
+                        containerColor = when (viewModel.firstUp3){
+                            "UP" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "2x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "5x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "10x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            else -> Color.Yellow},
                         contentColor = Color.Blue
                     )
                 ) {
@@ -902,7 +964,12 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color.Yellow,
+                        containerColor = when (viewModel.firstUp4){
+                            "UP" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "2x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "5x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            "10x" -> if (viewModel.state) Color.Yellow else Color.Cyan
+                            else -> Color.Yellow},
                         contentColor = Color.Blue
                     )
                 ) {
