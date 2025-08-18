@@ -368,8 +368,9 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
             ) {
                 //First Column, Fourth Up Button
                 Button(
-                    onClick = { viewModel.fourthUpClicked = true; if ((viewModel.thirdUp != "STOP") && (viewModel.thirdUp != " "))
-                                    { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
+                    onClick = { if ((viewModel.thirdUp != "STOP") && (viewModel.thirdUp != " "))
+                                    { haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                                        viewModel.fourthUpClicked = true }
                         viewModel.playLottery(4) },
                     modifier = Modifier
                         .clip(CircleShape)
@@ -388,8 +389,9 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                 }
                 //Second Column, Fourth Up Button
                 Button(
-                    onClick = { viewModel.fourthUp2clicked = true; if ((viewModel.thirdUp2 != "STOP") && (viewModel.thirdUp2 != " "))
-                    { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
+                    onClick = { if ((viewModel.thirdUp2 != "STOP") && (viewModel.thirdUp2 != " "))
+                    { haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                        viewModel.fourthUp2clicked = true }
                         viewModel.playLottery(9) },
                     modifier = Modifier
                         .clip(CircleShape)
@@ -408,8 +410,9 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                 }
                 //Third Column, Fourth Up Button
                 Button(
-                    onClick =  { viewModel.fourthUp3Clicked = true; if ((viewModel.thirdUp3 != "STOP") && (viewModel.thirdUp3 != " "))
-                                    { haptic.performHapticFeedback(HapticFeedbackType.LongPress) };
+                    onClick =  { if ((viewModel.thirdUp3 != "STOP") && (viewModel.thirdUp3 != " "))
+                                    { haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                                        viewModel.fourthUp3Clicked = true };
                         viewModel.playLottery(14) },
                     modifier = Modifier
                         .clip(CircleShape)
@@ -428,8 +431,9 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                 }
                 //Fourth Column, Fourth Up Button
                 Button(
-                    onClick = { viewModel.fourthUp4Clicked = true; if ((viewModel.thirdUp4 != "STOP") && (viewModel.thirdUp4 != " "))
-                    { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
+                    onClick = { if ((viewModel.thirdUp4 != "STOP") && (viewModel.thirdUp4 != " "))
+                    { haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                        viewModel.fourthUp4Clicked = true }
                         viewModel.playLottery(19) },
                     modifier = Modifier
                         .clip(CircleShape)
@@ -622,8 +626,9 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
             ) {
                 //First Column, Third Up Button
                 Button(
-                    onClick = { viewModel.thirdUpClicked = true; if ((viewModel.secondUp != "STOP") && (viewModel.secondUp != " "))
-                    { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
+                    onClick = { if ((viewModel.secondUp != "STOP") && (viewModel.secondUp != " "))
+                    { haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                        viewModel.thirdUpClicked = true }
                         viewModel.playLottery(3) },
                     modifier = Modifier
                         .clip(CircleShape)
@@ -642,8 +647,9 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                 }
                 //Second Column, Third Up Button
                 Button(
-                    onClick = { viewModel.thirdUp2Clicked = true; if ((viewModel.secondUp2 != "STOP") && (viewModel.secondUp2 != " "))
-                    { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
+                    onClick = { if ((viewModel.secondUp2 != "STOP") && (viewModel.secondUp2 != " "))
+                    { haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                        viewModel.thirdUp2Clicked = true }
                         viewModel.playLottery(8)},
                     modifier = Modifier
                         .clip(CircleShape)
@@ -662,8 +668,9 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                 }
                 //Third Column, Third Up Button
                 Button(
-                    onClick = { viewModel.thirdUp3Clicked = true; if ((viewModel.secondUp3 != "STOP") && (viewModel.secondUp3 != " "))
-                    { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
+                    onClick = { if ((viewModel.secondUp3 != "STOP") && (viewModel.secondUp3 != " "))
+                    { haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                        viewModel.thirdUp3Clicked = true }
                         viewModel.playLottery(13) },
                     modifier = Modifier
                         .clip(CircleShape)
@@ -682,8 +689,9 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                 }
                 //Fourth Colum, Third Up Button
                 Button(
-                    onClick = { viewModel.thirdUp4Clicked = true; if ((viewModel.secondUp4 != "STOP") && (viewModel.secondUp4 != " "))
-                    { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
+                    onClick = { if ((viewModel.secondUp4 != "STOP") && (viewModel.secondUp4 != " "))
+                    { haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                        viewModel.thirdUp4Clicked = true }
                         viewModel.playLottery(18) },
                     modifier = Modifier
                         .clip(CircleShape)
@@ -877,8 +885,9 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
             ) {
                 //First Column, Second Up Button
                 Button(
-                    onClick = { viewModel.secondUpClicked = true; if ((viewModel.firstUp != "STOP") && (viewModel.firstUp != " "))
-                    { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
+                    onClick = { if ((viewModel.firstUp != "STOP") && (viewModel.firstUp != " "))
+                    { haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                        viewModel.secondUpClicked = true }
                         viewModel.playLottery(2)  },
                     modifier = Modifier
                         .clip(CircleShape)
@@ -897,9 +906,10 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                 }
                 //Second Column, Second Up Button
                 Button(
-                    onClick = { viewModel.secondUp2Clicked = true; if ((viewModel.firstUp2 != "STOP") && (viewModel.firstUp2 != " "))
+                    onClick = { if ((viewModel.firstUp2 != "STOP") && (viewModel.firstUp2 != " "))
                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
-                        viewModel.playLottery(7) },
+                        viewModel.playLottery(7)
+                        viewModel.secondUp2Clicked = true },
                     modifier = Modifier
                         .clip(CircleShape)
                         .padding(top = 40.dp)
@@ -917,8 +927,9 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                 }
                 //Third Column, Second Up Button
                 Button(
-                    onClick = { viewModel.secondUp3Clicked = true; if ((viewModel.firstUp3 != "STOP") && (viewModel.firstUp3 != " "))
-                    { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
+                    onClick = { if ((viewModel.firstUp3 != "STOP") && (viewModel.firstUp3 != " "))
+                    { haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                        viewModel.secondUp3Clicked = true }
                         viewModel.playLottery(12) },
                     modifier = Modifier
                         .clip(CircleShape)
@@ -937,8 +948,9 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                 }
                 //Fourth Column, Second Up Button
                 Button(
-                    onClick = { viewModel.secondUp4Clicked = true; if ((viewModel.firstUp4 != "STOP") && (viewModel.firstUp4 != " "))
-                    { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
+                    onClick = { if ((viewModel.firstUp4 != "STOP") && (viewModel.firstUp4 != " "))
+                    { haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                        viewModel.secondUp4Clicked = true }
                         viewModel.playLottery(17) },
                     modifier = Modifier
                         .clip(CircleShape)
