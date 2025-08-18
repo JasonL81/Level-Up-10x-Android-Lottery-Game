@@ -368,7 +368,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
             ) {
                 //First Column, Fourth Up Button
                 Button(
-                    onClick = { if ((viewModel.thirdUp != "STOP") && (viewModel.thirdUp != " "))
+                    onClick = { viewModel.fourthUp4Clicked = true; if ((viewModel.thirdUp != "STOP") && (viewModel.thirdUp != " "))
                                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
                         viewModel.playLottery(4) },
                     modifier = Modifier
@@ -377,12 +377,10 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = when (viewModel.thirdUp){
-                           "UP" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "2x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "5x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "10x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                           else -> Color.Yellow},
+                        containerColor = if ((viewModel.thirdUp != "STOP") && (viewModel.thirdUp != " ") && !viewModel.fourthUp4Clicked) {
+                            if (viewModel.state) Color.Yellow else Color.Green}
+                        else {
+                            Color.Yellow},
                         contentColor = Color.Blue
                     )
                 ) {
@@ -390,7 +388,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                 }
                 //Second Column, Fourth Up Button
                 Button(
-                    onClick = { if ((viewModel.thirdUp2 != "STOP") && (viewModel.thirdUp2 != " "))
+                    onClick = { viewModel.fourthUp2clicked = true; if ((viewModel.thirdUp2 != "STOP") && (viewModel.thirdUp2 != " "))
                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
                         viewModel.playLottery(9) },
                     modifier = Modifier
@@ -399,12 +397,10 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = when (viewModel.thirdUp2){
-                            "UP" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "2x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "5x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "10x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            else -> Color.Yellow},
+                        containerColor = if ((viewModel.thirdUp2 != "STOP") && (viewModel.thirdUp2 != " ") && !viewModel.fourthUp2clicked) {
+                            if (viewModel.state) Color.Yellow else Color.Green}
+                        else {
+                            Color.Yellow},
                         contentColor = Color.Blue
                     )
                 ) {
@@ -412,7 +408,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                 }
                 //Third Column, Fourth Up Button
                 Button(
-                    onClick =  { if ((viewModel.thirdUp3 != "STOP") && (viewModel.thirdUp3 != " "))
+                    onClick =  { viewModel.fourthUp3Clicked = true; if ((viewModel.thirdUp3 != "STOP") && (viewModel.thirdUp3 != " "))
                                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress) };
                         viewModel.playLottery(14) },
                     modifier = Modifier
@@ -421,12 +417,10 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = when (viewModel.thirdUp3){
-                            "UP" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "2x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "5x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "10x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            else -> Color.Yellow},
+                        containerColor = if ((viewModel.thirdUp3 != "STOP") && (viewModel.thirdUp3 != " ") && !viewModel.fourthUp3Clicked) {
+                            if (viewModel.state) Color.Yellow else Color.Green}
+                        else {
+                            Color.Yellow},
                         contentColor = Color.Blue
                     )
                 ) {
@@ -434,7 +428,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                 }
                 //Fourth Column, Fourth Up Button
                 Button(
-                    onClick = { if ((viewModel.thirdUp4 != "STOP") && (viewModel.thirdUp4 != " "))
+                    onClick = { viewModel.fourthUp4Clicked = true; if ((viewModel.thirdUp4 != "STOP") && (viewModel.thirdUp4 != " "))
                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
                         viewModel.playLottery(19) },
                     modifier = Modifier
@@ -443,12 +437,10 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = when (viewModel.thirdUp4){
-                            "UP" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "2x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "5x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "10x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            else -> Color.Yellow},
+                        containerColor = if ((viewModel.thirdUp4 != "STOP") && (viewModel.thirdUp4 != " ") && !viewModel.fourthUp4Clicked) {
+                            if (viewModel.state) Color.Yellow else Color.Green}
+                        else {
+                            Color.Yellow},
                         contentColor = Color.Blue
                     )
                 ) {
@@ -630,7 +622,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
             ) {
                 //First Column, Third Up Button
                 Button(
-                    onClick = { if ((viewModel.secondUp != "STOP") && (viewModel.secondUp != " "))
+                    onClick = { viewModel.thirdUpClicked = true; if ((viewModel.secondUp != "STOP") && (viewModel.secondUp != " "))
                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
                         viewModel.playLottery(3) },
                     modifier = Modifier
@@ -639,12 +631,10 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = when (viewModel.secondUp){
-                            "UP" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "2x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "5x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "10x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            else -> Color.Yellow},
+                        containerColor = if ((viewModel.secondUp != "STOP") && (viewModel.secondUp != " ") && !viewModel.thirdUpClicked) {
+                            if (viewModel.state) Color.Yellow else Color.Green}
+                        else {
+                            Color.Yellow},
                         contentColor = Color.Blue
                     )
                 ) {
@@ -652,7 +642,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                 }
                 //Second Column, Third Up Button
                 Button(
-                    onClick = { if ((viewModel.secondUp2 != "STOP") && (viewModel.secondUp2 != " "))
+                    onClick = { viewModel.thirdUp2Clicked = true; if ((viewModel.secondUp2 != "STOP") && (viewModel.secondUp2 != " "))
                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
                         viewModel.playLottery(8)},
                     modifier = Modifier
@@ -661,12 +651,10 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = when (viewModel.secondUp2){
-                            "UP" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "2x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "5x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "10x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            else -> Color.Yellow},
+                        containerColor = if ((viewModel.secondUp2 != "STOP") && (viewModel.secondUp2 != " ") && !viewModel.thirdUp2Clicked) {
+                            if (viewModel.state) Color.Yellow else Color.Green}
+                        else {
+                            Color.Yellow},
                         contentColor = Color.Blue
                     )
                 ) {
@@ -674,7 +662,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                 }
                 //Third Column, Third Up Button
                 Button(
-                    onClick = { if ((viewModel.secondUp3 != "STOP") && (viewModel.secondUp3 != " "))
+                    onClick = { viewModel.thirdUp3Clicked = true; if ((viewModel.secondUp3 != "STOP") && (viewModel.secondUp3 != " "))
                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
                         viewModel.playLottery(13) },
                     modifier = Modifier
@@ -683,12 +671,10 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = when (viewModel.secondUp3){
-                            "UP" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "2x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "5x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "10x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            else -> Color.Yellow},
+                        containerColor = if ((viewModel.secondUp3 != "STOP") && (viewModel.secondUp3 != " ") && !viewModel.thirdUp3Clicked) {
+                            if (viewModel.state) Color.Yellow else Color.Green}
+                        else {
+                            Color.Yellow},
                         contentColor = Color.Blue
                     )
                 ) {
@@ -696,7 +682,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                 }
                 //Fourth Colum, Third Up Button
                 Button(
-                    onClick = { if ((viewModel.secondUp4 != "STOP") && (viewModel.secondUp4 != " "))
+                    onClick = { viewModel.thirdUp4Clicked = true; if ((viewModel.secondUp4 != "STOP") && (viewModel.secondUp4 != " "))
                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
                         viewModel.playLottery(18) },
                     modifier = Modifier
@@ -705,12 +691,10 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = when (viewModel.secondUp4){
-                            "UP" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "2x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "5x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "10x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            else -> Color.Yellow},
+                        containerColor = if ((viewModel.secondUp4 != "STOP") && (viewModel.secondUp4 != " ") && !viewModel.thirdUp4Clicked) {
+                            if (viewModel.state) Color.Yellow else Color.Green}
+                        else {
+                            Color.Yellow},
                         contentColor = Color.Blue
                     )
                 ) {
@@ -893,7 +877,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
             ) {
                 //First Column, Second Up Button
                 Button(
-                    onClick = { viewModel.firstUpClicked = true; if ((viewModel.firstUp != "STOP") && (viewModel.firstUp != " "))
+                    onClick = { viewModel.secondUpClicked = true; if ((viewModel.firstUp != "STOP") && (viewModel.firstUp != " "))
                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
                         viewModel.playLottery(2)  },
                     modifier = Modifier
@@ -902,7 +886,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = if ((viewModel.firstUp != "STOP") && (viewModel.firstUp != " ") && !viewModel.firstUpClicked) {
+                        containerColor = if ((viewModel.firstUp != "STOP") && (viewModel.firstUp != " ") && !viewModel.secondUpClicked) {
                             if (viewModel.state) Color.Yellow else Color.Green}
                         else {
                             Color.Yellow},
@@ -913,7 +897,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                 }
                 //Second Column, Second Up Button
                 Button(
-                    onClick = {viewModel.secondUpClicked = true; if ((viewModel.firstUp2 != "STOP") && (viewModel.firstUp2 != " "))
+                    onClick = { viewModel.secondUp2Clicked = true; if ((viewModel.firstUp2 != "STOP") && (viewModel.firstUp2 != " "))
                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
                         viewModel.playLottery(7) },
                     modifier = Modifier
@@ -922,7 +906,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = if ((viewModel.firstUp2 != "STOP") && (viewModel.firstUp2 != " ") && !viewModel.secondUpClicked) {
+                        containerColor = if ((viewModel.firstUp2 != "STOP") && (viewModel.firstUp2 != " ") && !viewModel.secondUp2Clicked) {
                             if (viewModel.state) Color.Yellow else Color.Green}
                         else {
                             Color.Yellow},
@@ -933,7 +917,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                 }
                 //Third Column, Second Up Button
                 Button(
-                    onClick = { if ((viewModel.firstUp3 != "STOP") && (viewModel.firstUp3 != " "))
+                    onClick = { viewModel.secondUp3Clicked = true; if ((viewModel.firstUp3 != "STOP") && (viewModel.firstUp3 != " "))
                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
                         viewModel.playLottery(12) },
                     modifier = Modifier
@@ -942,12 +926,10 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = when (viewModel.firstUp3){
-                            "UP" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "2x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "5x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "10x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            else -> Color.Yellow},
+                        containerColor = if ((viewModel.firstUp3 != "STOP") && (viewModel.firstUp3 != " ") && !viewModel.secondUp3Clicked) {
+                            if (viewModel.state) Color.Yellow else Color.Green}
+                        else {
+                            Color.Yellow},
                         contentColor = Color.Blue
                     )
                 ) {
@@ -955,7 +937,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                 }
                 //Fourth Column, Second Up Button
                 Button(
-                    onClick = { if ((viewModel.firstUp4 != "STOP") && (viewModel.firstUp4 != " "))
+                    onClick = { viewModel.secondUp4Clicked = true; if ((viewModel.firstUp4 != "STOP") && (viewModel.firstUp4 != " "))
                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
                         viewModel.playLottery(17) },
                     modifier = Modifier
@@ -964,12 +946,10 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = when (viewModel.firstUp4){
-                            "UP" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "2x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "5x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            "10x" -> if (viewModel.state) Color.Yellow else Color.Cyan
-                            else -> Color.Yellow},
+                        containerColor = if ((viewModel.firstUp4 != "STOP") && (viewModel.firstUp4 != " ") && !viewModel.secondUp4Clicked) {
+                            if (viewModel.state) Color.Yellow else Color.Green}
+                        else {
+                            Color.Yellow},
                         contentColor = Color.Blue
                     )
                 ) {

@@ -44,11 +44,19 @@ class LevelUp10xViewModel : ViewModel() {
     var state by (mutableStateOf(false))
 
     //Variables For Blinking Buttons
-    var firstUpClicked = false;
-    var secondUpClicked = false;
-    var thirdUpClicked = false;
-    var fourthUpClicked = false;
-    var columnPrizeClicked = false;
+    var firstUpClicked = false
+    var secondUpClicked = false
+    var thirdUp3Clicked = false
+    var secondUp2Clicked = false
+    var fourthUp3Clicked = false
+    var columnPrizeClicked = false
+    var secondUp3Clicked = false
+    var secondUp4Clicked = false
+    var thirdUp2Clicked = false
+    var thirdUpClicked = false
+    var thirdUp4Clicked = false
+    var fourthUp4Clicked = false
+    var fourthUp2clicked = false
 
     fun playLottery(input: Int) {
         when (input) {
@@ -108,6 +116,16 @@ class LevelUp10xViewModel : ViewModel() {
 
         firstUpClicked = false
         secondUpClicked = false
+        thirdUp3Clicked = false
+        fourthUp3Clicked = false
+        secondUp2Clicked = false
+        secondUp3Clicked = false
+        secondUp4Clicked = false
+        thirdUp2Clicked = false
+        thirdUpClicked = false
+        thirdUp4Clicked = false
+        fourthUp4Clicked = false
+        fourthUp2clicked = false
     }
 }
 
