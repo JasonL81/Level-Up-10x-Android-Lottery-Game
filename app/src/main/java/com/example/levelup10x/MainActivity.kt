@@ -368,7 +368,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
             ) {
                 //First Column, Fourth Up Button
                 Button(
-                    onClick = { viewModel.fourthUp4Clicked = true; if ((viewModel.thirdUp != "STOP") && (viewModel.thirdUp != " "))
+                    onClick = { viewModel.fourthUpClicked = true; if ((viewModel.thirdUp != "STOP") && (viewModel.thirdUp != " "))
                                     { haptic.performHapticFeedback(HapticFeedbackType.LongPress) }
                         viewModel.playLottery(4) },
                     modifier = Modifier
@@ -377,7 +377,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .size(80.dp),
                     border = BorderStroke(5.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = if ((viewModel.thirdUp != "STOP") && (viewModel.thirdUp != " ") && !viewModel.fourthUp4Clicked) {
+                        containerColor = if ((viewModel.thirdUp != "STOP") && (viewModel.thirdUp != " ") && !viewModel.fourthUpClicked) {
                             if (viewModel.state) Color.Yellow else Color.Green}
                         else {
                             Color.Yellow},

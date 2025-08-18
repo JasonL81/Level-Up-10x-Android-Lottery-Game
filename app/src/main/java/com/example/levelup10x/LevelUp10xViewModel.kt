@@ -54,6 +54,7 @@ class LevelUp10xViewModel : ViewModel() {
     var secondUp4Clicked = false
     var thirdUp2Clicked = false
     var thirdUpClicked = false
+    var fourthUpClicked = false
     var thirdUp4Clicked = false
     var fourthUp4Clicked = false
     var fourthUp2clicked = false
@@ -124,6 +125,7 @@ class LevelUp10xViewModel : ViewModel() {
         thirdUp2Clicked = false
         thirdUpClicked = false
         thirdUp4Clicked = false
+        fourthUpClicked = false
         fourthUp4Clicked = false
         fourthUp2clicked = false
     }
