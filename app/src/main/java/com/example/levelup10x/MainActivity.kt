@@ -376,7 +376,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .clip(CircleShape)
                         .padding(top = 40.dp)
                         .size(80.dp),
-                    border = BorderStroke(5.dp, Color.Red),
+                    border = BorderStroke(7.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = if ((viewModel.thirdUp != "STOP") && (viewModel.thirdUp != " ") && !viewModel.fourthUpClicked) {
                             if (viewModel.state) Color.Yellow else Color.Green}
@@ -385,7 +385,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         contentColor = Color.Blue
                     )
                 ) {
-                    Text("Up", fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                    Text("Up", fontWeight = FontWeight.Bold, fontSize = 24.sp)
                 }
                 //Second Column, Fourth Up Button
                 Button(
@@ -397,7 +397,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .clip(CircleShape)
                         .padding(top = 40.dp)
                         .size(80.dp),
-                    border = BorderStroke(5.dp, Color.Red),
+                    border = BorderStroke(7.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = if ((viewModel.thirdUp2 != "STOP") && (viewModel.thirdUp2 != " ") && !viewModel.fourthUp2clicked) {
                             if (viewModel.state) Color.Yellow else Color.Green}
@@ -406,7 +406,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         contentColor = Color.Blue
                     )
                 ) {
-                    Text("Up", fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                    Text("Up", fontWeight = FontWeight.Bold, fontSize = 24.sp)
                 }
                 //Third Column, Fourth Up Button
                 Button(
@@ -418,7 +418,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .clip(CircleShape)
                         .padding(top = 40.dp)
                         .size(80.dp),
-                    border = BorderStroke(5.dp, Color.Red),
+                    border = BorderStroke(7.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = if ((viewModel.thirdUp3 != "STOP") && (viewModel.thirdUp3 != " ") && !viewModel.fourthUp3Clicked) {
                             if (viewModel.state) Color.Yellow else Color.Green}
@@ -427,7 +427,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         contentColor = Color.Blue
                     )
                 ) {
-                    Text("Up", fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                    Text("Up", fontWeight = FontWeight.Bold, fontSize = 24.sp)
                 }
                 //Fourth Column, Fourth Up Button
                 Button(
@@ -439,7 +439,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .clip(CircleShape)
                         .padding(top = 40.dp)
                         .size(80.dp),
-                    border = BorderStroke(5.dp, Color.Red),
+                    border = BorderStroke(7.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = if ((viewModel.thirdUp4 != "STOP") && (viewModel.thirdUp4 != " ") && !viewModel.fourthUp4Clicked) {
                             if (viewModel.state) Color.Yellow else Color.Green}
@@ -448,7 +448,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         contentColor = Color.Blue
                     )
                 ) {
-                    Text("Up", fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                    Text("Up", fontWeight = FontWeight.Bold, fontSize = 24.sp)
                 }
             }
         }
@@ -634,7 +634,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .clip(CircleShape)
                         .padding(top = 40.dp)
                         .size(80.dp),
-                    border = BorderStroke(5.dp, Color.Red),
+                    border = BorderStroke(7.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = if ((viewModel.secondUp != "STOP") && (viewModel.secondUp != " ") && !viewModel.thirdUpClicked) {
                             if (viewModel.state) Color.Yellow else Color.Green}
@@ -643,7 +643,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         contentColor = Color.Blue
                     )
                 ) {
-                    Text("Up", fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                    Text("Up", fontWeight = FontWeight.Bold, fontSize = 24.sp)
                 }
                 //Second Column, Third Up Button
                 Button(
@@ -655,7 +655,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .clip(CircleShape)
                         .padding(top = 40.dp)
                         .size(80.dp),
-                    border = BorderStroke(5.dp, Color.Red),
+                    border = BorderStroke(7.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = if ((viewModel.secondUp2 != "STOP") && (viewModel.secondUp2 != " ") && !viewModel.thirdUp2Clicked) {
                             if (viewModel.state) Color.Yellow else Color.Green}
@@ -664,7 +664,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         contentColor = Color.Blue
                     )
                 ) {
-                    Text("Up", fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                    Text("Up", fontWeight = FontWeight.Bold, fontSize = 24.sp)
                 }
                 //Third Column, Third Up Button
                 Button(
@@ -676,7 +676,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .clip(CircleShape)
                         .padding(top = 40.dp)
                         .size(80.dp),
-                    border = BorderStroke(5.dp, Color.Red),
+                    border = BorderStroke(7.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = if ((viewModel.secondUp3 != "STOP") && (viewModel.secondUp3 != " ") && !viewModel.thirdUp3Clicked) {
                             if (viewModel.state) Color.Yellow else Color.Green}
@@ -685,7 +685,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         contentColor = Color.Blue
                     )
                 ) {
-                    Text("Up", fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                    Text("Up", fontWeight = FontWeight.Bold, fontSize = 24.sp)
                 }
                 //Fourth Colum, Third Up Button
                 Button(
@@ -697,7 +697,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .clip(CircleShape)
                         .padding(top = 40.dp)
                         .size(80.dp),
-                    border = BorderStroke(5.dp, Color.Red),
+                    border = BorderStroke(7.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = if ((viewModel.secondUp4 != "STOP") && (viewModel.secondUp4 != " ") && !viewModel.thirdUp4Clicked) {
                             if (viewModel.state) Color.Yellow else Color.Green}
@@ -706,7 +706,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         contentColor = Color.Blue
                     )
                 ) {
-                    Text("Up", fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                    Text("Up", fontWeight = FontWeight.Bold, fontSize = 24.sp)
                 }
             }
         }
@@ -893,7 +893,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .clip(CircleShape)
                         .padding(top = 40.dp)
                         .size(80.dp),
-                    border = BorderStroke(5.dp, Color.Red),
+                    border = BorderStroke(7.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = if ((viewModel.firstUp != "STOP") && (viewModel.firstUp != " ") && !viewModel.secondUpClicked) {
                             if (viewModel.state) Color.Yellow else Color.Green}
@@ -902,7 +902,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         contentColor = Color.Blue
                     )
                 ) {
-                    Text("Up", fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                    Text("Up", fontWeight = FontWeight.Bold, fontSize = 24.sp)
                 }
                 //Second Column, Second Up Button
                 Button(
@@ -914,7 +914,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .clip(CircleShape)
                         .padding(top = 40.dp)
                         .size(80.dp),
-                    border = BorderStroke(5.dp, Color.Red),
+                    border = BorderStroke(7.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = if ((viewModel.firstUp2 != "STOP") && (viewModel.firstUp2 != " ") && !viewModel.secondUp2Clicked) {
                             if (viewModel.state) Color.Yellow else Color.Green}
@@ -923,7 +923,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         contentColor = Color.Blue
                     )
                 ) {
-                    Text("Up", fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                    Text("Up", fontWeight = FontWeight.Bold, fontSize = 24.sp)
                 }
                 //Third Column, Second Up Button
                 Button(
@@ -935,7 +935,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .clip(CircleShape)
                         .padding(top = 40.dp)
                         .size(80.dp),
-                    border = BorderStroke(5.dp, Color.Red),
+                    border = BorderStroke(7.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = if ((viewModel.firstUp3 != "STOP") && (viewModel.firstUp3 != " ") && !viewModel.secondUp3Clicked) {
                             if (viewModel.state) Color.Yellow else Color.Green}
@@ -944,7 +944,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         contentColor = Color.Blue
                     )
                 ) {
-                    Text("Up", fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                    Text("Up", fontWeight = FontWeight.Bold, fontSize = 24.sp)
                 }
                 //Fourth Column, Second Up Button
                 Button(
@@ -956,7 +956,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         .clip(CircleShape)
                         .padding(top = 40.dp)
                         .size(80.dp),
-                    border = BorderStroke(5.dp, Color.Red),
+                    border = BorderStroke(7.dp, Color.Red),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = if ((viewModel.firstUp4 != "STOP") && (viewModel.firstUp4 != " ") && !viewModel.secondUp4Clicked) {
                             if (viewModel.state) Color.Yellow else Color.Green}
@@ -965,7 +965,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
                         contentColor = Color.Blue
                     )
                 ) {
-                    Text("Up", fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                    Text("Up", fontWeight = FontWeight.Bold, fontSize = 24.sp)
                 }
             }
         }
