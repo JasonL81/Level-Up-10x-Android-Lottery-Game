@@ -9,8 +9,10 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -67,12 +69,12 @@ fun Name(message: String, fontSize: Float){
 
 @Composable
 fun Button(navController: NavHostController) {
-
     var userName by remember { mutableStateOf("") }
     val onUserNameChange = { text: String ->
         userName = text
     }
     val context = LocalContext.current
+    val haptic = LocalHapticFeedback.current
 
     Box(
         modifier = Modifier
@@ -89,9 +91,10 @@ fun Button(navController: NavHostController) {
 
             Button(
                 onClick = { try {
-                                navController.navigate(NavRoutes.Lottery.route + "/$userName")
-                            } catch (e: Exception)
-                            {Toast.makeText(context, "ENTER YOUR NAME", Toast.LENGTH_LONG).show()} },
+                        navController.navigate(NavRoutes.Lottery.route + "/$userName")
+                        } catch (e: Exception)
+                        {Toast.makeText(context, "ENTER YOUR NAME", Toast.LENGTH_LONG).show()};
+                    haptic.performHapticFeedback(HapticFeedbackType.LongPress) },
                 modifier = Modifier
                     .padding(top = 60.dp)
                     .height(70.dp)
