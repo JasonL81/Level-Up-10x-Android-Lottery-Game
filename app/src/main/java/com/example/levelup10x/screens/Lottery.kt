@@ -56,8 +56,7 @@ fun Lottery(userName: String?) {
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 TitleDisplay(message = "Level Up 10X", fontSize = 50f)
-                WelcomeDisplay(message = "Welcome $userName", fontSize = 30f)
-                LotteryPortrait()
+                LotteryPortrait(message = "Welcome $userName")
             }
         }
     } else {
@@ -67,8 +66,7 @@ fun Lottery(userName: String?) {
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 TitleDisplay(message = "Level Up 10X", fontSize = 60f)
-                WelcomeDisplay(message = "Welcome $userName", fontSize = 30f)
-                LotteryLandscape()
+                LotteryLandscape(message = "Welcome $userName")
             }
         }
     }
@@ -87,23 +85,8 @@ fun TitleDisplay(message: String, fontSize: Float){
         color = Color.Green
     )
 }
-
 @Composable
-fun WelcomeDisplay(message: String, fontSize: Float){
-    Text(modifier = Modifier
-        .padding(top = 10.dp, bottom = 10.dp)
-        //.background(Color.Blue)
-        .fillMaxWidth(),
-        textAlign = TextAlign.Center,
-        text = message,
-        fontSize = fontSize.sp,
-        fontWeight = FontWeight.Bold,
-        color = Color.Blue
-    )
-}
-
-@Composable
-fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
+fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel(), message: String) {
     val haptic = LocalHapticFeedback.current
     //Flashing Colors for Duplicate Wins
     LaunchedEffect(Unit) {
@@ -125,6 +108,17 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
         contentPadding = PaddingValues(10.dp)
     )
     {
+        item{
+            Text(modifier = Modifier
+                .padding(top = 10.dp, bottom = 10.dp)
+                .fillMaxWidth(),
+                 textAlign = TextAlign.Center,
+                 text = message,
+                 fontSize = 35.sp,
+                 fontWeight = FontWeight.Bold,
+                 color = Color.Blue
+                )
+        }
         item {
             Row(
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -1194,7 +1188,7 @@ fun LotteryPortrait(viewModel: LevelUp10xViewModel = viewModel()) {
 }
 
 @Composable
-fun LotteryLandscape(viewModel: LevelUp10xViewModel = viewModel()) {
+fun LotteryLandscape(viewModel: LevelUp10xViewModel = viewModel(), message: String) {
     val haptic = LocalHapticFeedback.current
     LazyColumn(
         modifier = Modifier
@@ -1207,6 +1201,17 @@ fun LotteryLandscape(viewModel: LevelUp10xViewModel = viewModel()) {
         contentPadding = PaddingValues(10.dp)
     )
     {
+        item{
+            Text(modifier = Modifier
+                .padding(top = 10.dp, bottom = 10.dp)
+                .fillMaxWidth(),
+                textAlign = TextAlign.Center,
+                text = message,
+                fontSize = 35.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color.Blue
+            )
+        }
         item {
             Row(
                 horizontalArrangement = Arrangement.SpaceBetween,
