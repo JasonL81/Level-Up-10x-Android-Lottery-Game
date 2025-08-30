@@ -1,6 +1,7 @@
 package com.example.levelup10x.screens
 
 import android.widget.Toast
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -93,12 +94,13 @@ fun Button(navController: NavHostController) {
                 onClick = { try {
                         navController.navigate(NavRoutes.Lottery.route + "/$userName")
                         } catch (e: Exception)
-                        {Toast.makeText(context, "ENTER YOUR NAME", Toast.LENGTH_LONG).show()};
+                        { Toast.makeText(context, "ENTER YOUR NAME", Toast.LENGTH_LONG).show()};
                     haptic.performHapticFeedback(HapticFeedbackType.LongPress) },
                 modifier = Modifier
                     .padding(top = 60.dp)
                     .height(70.dp)
-                    .width(250.dp),
+                    .width(300.dp),
+                border = BorderStroke(5.dp, Color.Blue),
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Color.Yellow,
                     contentColor = Color.Blue
