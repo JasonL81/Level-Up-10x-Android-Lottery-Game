@@ -36,7 +36,7 @@ fun Home(navController: NavHostController) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             HomeTitle(message = "Level Up 10x", fontSize = 50f)
-            Name(message = "PLEASE ENTER YOUR NAME", fontSize = 30f)
+            EnterName(message = "PLEASE ENTER YOUR NAME", fontSize = 30f)
             Button(navController)
         }
     }
@@ -45,8 +45,7 @@ fun Home(navController: NavHostController) {
 @Composable
 fun HomeTitle(message: String, fontSize: Float){
     Text(modifier = Modifier
-        .padding(top = 60.dp)
-        .padding(bottom = 40.dp)
+        .padding(top = 60.dp, bottom = 40.dp)
         .background(Color.Magenta)
         .fillMaxWidth(),
         textAlign = TextAlign.Center,
@@ -58,8 +57,8 @@ fun HomeTitle(message: String, fontSize: Float){
 }
 
 @Composable
-fun Name(message: String, fontSize: Float){
-    Text(modifier = Modifier .padding(top = 50.dp),
+fun EnterName(message: String, fontSize: Float){
+    Text(modifier = Modifier .padding(top = 50.dp, bottom = 30.dp),
         text = message,
         textAlign = TextAlign.Center,
         fontSize = fontSize.sp,
@@ -108,6 +107,14 @@ fun Button(navController: NavHostController) {
             ) {
                 Text("Play Lottery", fontWeight = FontWeight.Bold, fontSize = 30.sp)
             }
+
+            Text(modifier = Modifier .padding(top = 50.dp),
+                text = "By Jason Luzar",
+                textAlign = TextAlign.Center,
+                fontSize = 30.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color.Green
+            )
         }
     }
 }
@@ -132,6 +139,6 @@ fun CustomTextField(
             focusedBorderColor = Color.Green, // Outline color when focused
             unfocusedBorderColor = Color.Blue // Outline color when unfocused
         ),
-
-    )
+        )
 }
+
