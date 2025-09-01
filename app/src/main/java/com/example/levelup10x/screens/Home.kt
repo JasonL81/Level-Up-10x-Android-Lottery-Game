@@ -37,7 +37,7 @@ fun Home(navController: NavHostController) {
         ) {
             HomeTitle(message = "Level Up 10x", fontSize = 50f)
             EnterName(message = "PLEASE ENTER YOUR NAME", fontSize = 30f)
-            Button(navController)
+            Button(navController, message = "By Jason Luzar", fontSize = 30f)
         }
     }
 }
@@ -68,7 +68,7 @@ fun EnterName(message: String, fontSize: Float){
 }
 
 @Composable
-fun Button(navController: NavHostController) {
+fun Button(navController: NavHostController, message: String, fontSize: Float) {
     var userName by remember { mutableStateOf("") }
     val onUserNameChange = { text: String ->
         userName = text
@@ -109,9 +109,9 @@ fun Button(navController: NavHostController) {
             }
 
             Text(modifier = Modifier .padding(top = 50.dp),
-                text = "By Jason Luzar",
+                text = message,
                 textAlign = TextAlign.Center,
-                fontSize = 30.sp,
+                fontSize = fontSize.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color.Green
             )
