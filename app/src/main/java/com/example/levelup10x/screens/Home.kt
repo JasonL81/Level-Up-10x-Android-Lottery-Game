@@ -4,7 +4,9 @@ import android.widget.Toast
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -125,20 +127,24 @@ fun CustomTextField(
     textState: String,
     onTextChange: (String) -> Unit,
 ) {
-    val transparentYellow =  Color.Yellow.copy(alpha = 0.5f)
+    val transparentYellow =  Color.Yellow.copy(alpha = 0.6f)
     OutlinedTextField(
         value = textState,
         onValueChange = { onTextChange(it) },
         singleLine = true,
         modifier = Modifier
+            .height(90.dp)
+            .width(350.dp)
             .padding(10.dp)
             .background(color = transparentYellow),
         textStyle = TextStyle(fontWeight = FontWeight.Bold,
             fontSize = 30.sp, color = Color.Green),
         colors = TextFieldDefaults.outlinedTextFieldColors(
             focusedBorderColor = Color.Green, // Outline color when focused
-            unfocusedBorderColor = Color.Blue // Outline color when unfocused
-        ),
+            unfocusedBorderColor = Color.Blue, // Outline color when unfocused
+            ),
         )
 }
+
+
 
