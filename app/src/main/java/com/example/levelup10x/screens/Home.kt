@@ -11,6 +11,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.layout.ContentScale
@@ -128,6 +129,8 @@ fun CustomTextField(
     onTextChange: (String) -> Unit,
 ) {
     val transparentYellow =  Color.Yellow.copy(alpha = 0.6f)
+    val linearGradient = remember { Brush.linearGradient(
+        colors = listOf(Color.Red, Color.Blue, Color.Green) )}
     OutlinedTextField(
         value = textState,
         onValueChange = { onTextChange(it) },
@@ -137,8 +140,7 @@ fun CustomTextField(
             .width(350.dp)
             .padding(10.dp)
             .background(color = transparentYellow),
-        textStyle = TextStyle(fontWeight = FontWeight.Bold,
-            fontSize = 30.sp, color = Color.Green),
+        textStyle = TextStyle(brush = linearGradient, fontSize = 35.sp),
         colors = TextFieldDefaults.outlinedTextFieldColors(
             focusedBorderColor = Color.Green, // Outline color when focused
             unfocusedBorderColor = Color.Blue, // Outline color when unfocused
